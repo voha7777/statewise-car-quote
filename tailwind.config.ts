@@ -26,7 +26,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +54,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				trust: {
+					blue: 'hsl(var(--trust-blue))',
+					green: 'hsl(var(--trust-green))',
+					orange: 'hsl(var(--trust-orange))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +74,20 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)', 
+				'gradient-trust': 'var(--gradient-trust)'
+			},
+			boxShadow: {
+				'brand': 'var(--shadow-brand)',
+				'soft': 'var(--shadow-soft)',
+				'glow': 'var(--shadow-glow)'
+			},
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+				'heading': ['Inter', 'system-ui', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {

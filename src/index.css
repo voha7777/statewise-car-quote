@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Car Insurance Design System - Professional, trustworthy, modern
+All colors MUST be HSL for perfect theming
 */
 
 @layer base {
   :root {
+    /* Base colors - Clean, professional */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 216 20% 15%;
 
+    /* Card system */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 216 20% 15%;
 
+    /* Popover system */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 216 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Trust blue for car insurance */
+    --primary: 217 91% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 40%;
+    --primary-glow: 217 100% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Professional gray-blue */
+    --secondary: 215 25% 96%;
+    --secondary-foreground: 216 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones */
+    --muted: 215 25% 96%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Success green for trust */
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Trust colors for insurance */
+    --trust-blue: 217 91% 45%;
+    --trust-green: 142 71% 45%;
+    --trust-orange: 25 95% 53%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Destructive - Warning red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    /* Border and inputs */
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 217 91% 45%;
+
+    /* Gradients for modern appeal */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 45%), hsl(217 100% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 25% 98%));
+    --gradient-trust: linear-gradient(90deg, hsl(217 91% 45%), hsl(142 71% 45%));
+
+    /* Shadows with brand colors */
+    --shadow-brand: 0 10px 40px -10px hsl(217 91% 45% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(215 20% 15% / 0.1);
+    --shadow-glow: 0 0 40px hsl(217 100% 65% / 0.4);
+
+    /* Border radius system */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +83,48 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode for car insurance - Professional navy theme */
+    --background: 216 30% 8%;
+    --foreground: 215 25% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 216 25% 10%;
+    --card-foreground: 215 25% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 216 25% 10%;
+    --popover-foreground: 215 25% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 100% 65%;
+    --primary-foreground: 216 30% 8%;
+    --primary-hover: 217 100% 60%;
+    --primary-glow: 217 100% 70%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 216 20% 15%;
+    --secondary-foreground: 215 25% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 216 20% 15%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142 71% 55%;
+    --accent-foreground: 216 30% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --trust-blue: 217 100% 65%;
+    --trust-green: 142 71% 55%;
+    --trust-orange: 25 95% 60%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 20% 15%;
+    --input: 216 20% 15%;
+    --ring: 217 100% 65%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(216 30% 8%), hsl(217 100% 20%));
+    --gradient-card: linear-gradient(145deg, hsl(216 25% 10%), hsl(216 20% 12%));
+    --gradient-trust: linear-gradient(90deg, hsl(217 100% 65%), hsl(142 71% 55%));
+
+    --shadow-brand: 0 10px 40px -10px hsl(217 100% 65% / 0.4);
+    --shadow-soft: 0 4px 20px -4px hsl(216 30% 8% / 0.3);
+    --shadow-glow: 0 0 40px hsl(217 100% 70% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
